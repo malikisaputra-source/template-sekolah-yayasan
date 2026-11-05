@@ -1,0 +1,32 @@
+{
+  "slug": "template-sekolah-yayasan",
+  "judul": "Template Sekolah & Yayasan Qur'ani",
+  "ringkas": "Template website premium untuk yayasan, TK Qur'an, madrasah, dan SD Islam: kubah animasi GSAP, jadwal salat otomatis, satu config.js.",
+  "teknologi": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "GSAP"
+  ],
+  "kategori": "Template Website",
+  "tier": "premium",
+  "fitur": [
+    "Hero kubah beranimasi GSAP",
+    "Semua brand & kontak di config.js",
+    "Jadwal salat otomatis sesuai kota",
+    "Angka statistik berhitung saat digulir",
+    "Kartu program bingkai mihrab",
+    "Linimasa kisah lembaga",
+    "Tombol WhatsApp PPDB",
+    "Responsif + menu HP",
+    "Ilustrasi SVG tanpa foto"
+  ],
+  "cara": [
+    "Unduh/clone folder ini",
+    "Buka config.js, ganti nama, kontak, kota, angka",
+    "Ganti warna di style.css (:root)",
+    "Buka index.html di browser",
+    "Unggah ke GitHub Pages/Netlify/Vercel"
+  ],
+  "demo": "index.html"
+}
