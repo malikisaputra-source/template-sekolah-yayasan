@@ -1,3 +1,4 @@
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
 (() => {
   // Terapkan config.js ke elemen [data-cfg], [data-cfg-href], [data-count-cfg]
   const C = window.SITE || {};

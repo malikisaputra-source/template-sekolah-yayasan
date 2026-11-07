@@ -1,3 +1,4 @@
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
 /* ============================================================
    CONFIG — ganti semua teks brand, kontak, dan angka di sini.
    Semua data di bawah adalah CONTOH FIKTIF.

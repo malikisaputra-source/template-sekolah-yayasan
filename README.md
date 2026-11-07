@@ -46,3 +46,8 @@ Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisapu
 ## Lisensi
 
 MIT — lihat berkas `LICENSE`. Semua nama, kontak, dan angka di template ini **fiktif**; ilustrasi SVG buatan sendiri, silakan ganti dengan foto milik Anda.
+
+---
+
+<!-- kredit-maliki -->
+**Kredit:** Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Kredit di footer & kepala berkas wajib dipertahankan (lihat LICENSE).
