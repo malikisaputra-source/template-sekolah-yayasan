@@ -7,6 +7,31 @@
   const hrefs = { wa: 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(C.waPesan || ''), email: 'mailto:' + C.email, instagram: 'https://instagram.com/' + C.instagram, situs: 'https://' + C.situs, video: C.video };
   document.querySelectorAll('[data-cfg-href]').forEach((el) => { const h = hrefs[el.dataset.cfgHref]; if (h) el.href = h; });
   document.querySelectorAll('[data-cfg-ig]').forEach((el) => (el.textContent = '@' + C.instagram));
+  // Logo & foto dari config.js (logo, foto, guru, galeri)
+  const esc = (s) => String(s).replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const inisial = (C.singkat || C.nama || 'S').split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+  if (C.logo) {
+    document.querySelectorAll('svg[data-logo]').forEach((sv) => {
+      const im = new Image(); im.alt = ''; im.className = 'logo-img'; im.src = C.logo;
+      im.onerror = () => { const s = document.createElement('span'); s.className = 'logo-inisial'; s.textContent = inisial; im.replaceWith(s); };
+      sv.replaceWith(im);
+    });
+    const ic = document.querySelector('link[rel="icon"]'); if (ic) { ic.href = C.logo; ic.removeAttribute('type'); }
+  }
+  const F = C.foto || {};
+  document.querySelectorAll('[data-foto]').forEach((ph) => {
+    const [k, i] = ph.dataset.foto.split('.'); const src = i == null ? F[k] : (F[k] || [])[+i];
+    if (!src) return;
+    const im = new Image(); im.alt = ''; im.className = 'ph__foto'; im.loading = 'lazy'; im.decoding = 'async';
+    im.onload = () => ph.classList.add('ph--foto'); im.onerror = () => im.remove(); im.src = src; ph.appendChild(im);
+  });
+  if (F.hero) { const h = document.querySelector('.hero'); if (h) { h.style.setProperty('--hero-foto', 'url("' + encodeURI(F.hero) + '")'); h.classList.add('hero--foto'); } }
+  const guru = C.guru || [], galeri = C.galeri || [];
+  if (guru.length || galeri.length) {
+    document.getElementById('guru').hidden = false;
+    document.querySelector('[data-guru]').innerHTML = guru.map((g) => '<li class="gr"><img src="' + esc(g.foto) + '" alt="Foto ' + esc(g.nama) + '" width="600" height="750" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'span\'),{className:\'gr__ini\',textContent:this.alt.slice(5,7).toUpperCase()}))"><b>' + esc(g.nama) + '</b><span>' + esc(g.peran || '') + '</span></li>').join('');
+    document.querySelector('[data-galeri]').innerHTML = galeri.map((src, i) => '<img src="' + esc(src) + '" alt="Foto kegiatan ' + (i + 1) + '" width="800" height="600" loading="lazy" onerror="this.remove()">').join('');
+  }
   if (C.nama) document.title = C.nama + ' · Sekolah Qur\'ani Terpadu';
 
   const loader = document.querySelector('.loader');

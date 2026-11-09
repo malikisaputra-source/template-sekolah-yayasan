@@ -39,6 +39,23 @@ meta.json, README.md, LICENSE, ss.png
 
 Buka `config.js`: nama yayasan, alamat, WA, email, Instagram, kota (untuk jadwal salat), dan angka statistik ada di satu tempat. Warna ada di `style.css` bagian `:root` (`--g-900` hijau tua, `--orange`, `--teal`). Ilustrasi pengganti foto memakai kelas `.ph`; ganti dengan `<img>` foto Anda bila perlu.
 
+## Ganti logo & foto
+
+Semua path gambar ada di **`config.js`** (bagian `LOGO & FOTO`). Placeholder berlabel ada di folder `img/`; ganti dengan **menimpa berkas bernama sama** atau **ubah path**-nya.
+
+| Slot | Kunci di `config.js` | Placeholder | Rasio |
+|---|---|---|---|
+| Logo navbar, footer, favicon | `logo` (kosong = ornamen bunga) | `img/logo.svg` | 1:1 |
+| Latar hero | `foto.hero` | – | 16:9 |
+| Tentang, gedung, lingkaran angka | `foto.tentang`, `foto.gedung`, `foto.halaman` | – | 4:5, 4:3, 1:1 |
+| 4 kartu program | `foto.program[0..3]` | – | 3:4 |
+| 3 kubah fasilitas | `foto.fasilitas[0..2]` | – | 3:4 |
+| Latar ajakan daftar | `foto.cta` | – | 16:9 |
+| Guru & staf (nama, peran, foto) | `guru[]` | `img/guru-1..3.svg` | 4:5 |
+| Galeri kegiatan | `galeri[]` | `img/galeri-1..4.svg` | 4:3 |
+
+Slot yang kosong tetap memakai ilustrasi SVG bawaan. Foto yang gagal dimuat otomatis kembali ke ilustrasi; logo yang gagal diganti inisial nama. Kosongkan `guru` dan `galeri` untuk menyembunyikan bagian "Guru & galeri". Kompres foto (≤200 KB, lebar ≤1600 px).
+
 ## Kredit
 
 Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisaputra

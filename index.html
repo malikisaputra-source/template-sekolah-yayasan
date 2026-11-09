@@ -45,7 +45,7 @@
 
 <header class="nav">
   <a class="nav__brand" href="#top" aria-label="Beranda">
-    <svg><use href="#flower"/></svg><span data-cfg="singkat">Cahaya Ilmu</span>
+    <svg data-logo><use href="#flower"/></svg><span data-cfg="singkat">Cahaya Ilmu</span>
   </a>
   <nav class="nav__links" aria-label="Utama">
     <a href="#tentang">Tentang</a>
@@ -91,7 +91,7 @@
 
 <section class="about" id="tentang">
   <div class="about__media">
-    <div class="about__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi santri membaca"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div>
+    <div class="about__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi santri membaca" data-foto="tentang"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div>
     <figure class="about__quote">
       <svg class="qlogo" aria-hidden="true"><use href="#flower"/></svg>
       <blockquote>"Kami memadukan Al-Qur'an, ilmu pengetahuan, keterampilan, dan teknologi, bersinergi dengan orang tua dan masyarakat."</blockquote>
@@ -113,7 +113,7 @@
   <div class="heritage__left">
     <h2>Sekolah di desa, <em>berstandar kota</em></h2>
     <div class="heritage__img">
-      <div class="ph ph--e" role="img" aria-label="Ilustrasi gedung sekolah"><svg aria-hidden="true"><use href="#sc-school"/></svg></div>
+      <div class="ph ph--e" role="img" aria-label="Ilustrasi gedung sekolah" data-foto="gedung"><svg aria-hidden="true"><use href="#sc-school"/></svg></div>
       <div class="spin" aria-hidden="true">
         <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">BERMANFAAT · PROFESIONAL · BERKELANJUTAN · </textPath></text></svg>
         <svg class="spin__fl"><use href="#flower"/></svg>
@@ -140,7 +140,7 @@
   </div>
   <div class="orbit__vis">
     <svg class="orbit__ring" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1194" stroke-dashoffset="0" pathLength="1194"/><circle class="orbit__dot" cx="200" cy="10" r="9" fill="#e8892a"/></svg>
-    <div class="orbit__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi anak bermain di halaman"><svg aria-hidden="true"><use href="#sc-kids"/></svg></div></div>
+    <div class="orbit__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi anak bermain di halaman" data-foto="halaman"><svg aria-hidden="true"><use href="#sc-kids"/></svg></div></div>
     <div class="bub bub--a"><b><span data-count="120" data-count-cfg="santri">120</span>+</b><span>santri aktif</span></div>
     <div class="bub bub--b"><b><span data-count="20" data-count-cfg="guru">20</span>+</b><span>guru &amp; staf</span></div>
     <div class="bub bub--c"><b data-cfg="akreditasi">A</b><span>akreditasi</span></div>
@@ -155,25 +155,25 @@
   </div>
   <div class="cards">
     <article class="pc">
-      <div class="pc__img"><div class="ph ph--b" role="img" aria-label="Ilustrasi PAUD"><svg aria-hidden="true"><use href="#sc-kids"/></svg></div></div>
+      <div class="pc__img"><div class="ph ph--b" role="img" aria-label="Ilustrasi PAUD" data-foto="program.0"><svg aria-hidden="true"><use href="#sc-kids"/></svg></div></div>
       <span class="pc__tag">Usia 3–6 tahun</span>
       <h3>PAUD &amp; TK Qur'an</h3>
       <p>Pendidikan awal penuh kasih sayang, mengenalkan adab Qur'ani sejak dini.</p>
     </article>
     <article class="pc">
-      <div class="pc__img"><div class="ph ph--c" role="img" aria-label="Ilustrasi tahfizh"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div>
+      <div class="pc__img"><div class="ph ph--c" role="img" aria-label="Ilustrasi tahfizh" data-foto="program.1"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div>
       <span class="pc__tag">Sore &amp; intensif</span>
       <h3>Madrasah &amp; Tahfizh Remaja</h3>
       <p>Tahfizh Al-Qur'an, tajwid, dan pembinaan karakter remaja.</p>
     </article>
     <article class="pc">
-      <div class="pc__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi sekolah dasar"><svg aria-hidden="true"><use href="#sc-school"/></svg></div></div>
+      <div class="pc__img"><div class="ph ph--a" role="img" aria-label="Ilustrasi sekolah dasar" data-foto="program.2"><svg aria-hidden="true"><use href="#sc-school"/></svg></div></div>
       <span class="pc__tag">Full day school</span>
       <h3>SD Islam Terpadu</h3>
       <p>Pendidikan dasar holistik berfondasi akhlak dan teknologi.</p>
     </article>
     <article class="pc pc--alt">
-      <div class="pc__img"><div class="ph ph--d" role="img" aria-label="Ilustrasi rumah asuh"><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div>
+      <div class="pc__img"><div class="ph ph--d" role="img" aria-label="Ilustrasi rumah asuh" data-foto="program.3"><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div>
       <span class="pc__tag">Program sosial</span>
       <h3>Rumah Asuh Qur'ani</h3>
       <p>Pengasuhan dan pendidikan Qur'ani bagi anak yatim dan dhuafa.</p>
@@ -194,15 +194,24 @@
   </ol>
 </section>
 
+<section class="tim" id="guru" hidden>
+  <div class="tim__head">
+    <p class="tag"><svg><use href="#flower"/></svg> Guru &amp; galeri</p>
+    <h2>Dibimbing <em>pendidik</em> yang tulus</h2>
+  </div>
+  <ul class="tim__guru" data-guru></ul>
+  <div class="tim__galeri" data-galeri></div>
+</section>
+
 <section class="facil" id="fasilitas">
   <div class="facil__head">
     <p class="tag"><svg><use href="#flower"/></svg> Sarana &amp; keseharian</p>
     <h2>Lingkungan yang <em>asri, aman,</em> dan nyaman</h2>
   </div>
   <div class="domes">
-    <figure class="dm"><div class="dm__img"><div class="ph ph--e" role="img" aria-label="Ilustrasi kelas"><svg aria-hidden="true"><use href="#sc-school"/></svg></div></div><figcaption>Kelas nyaman</figcaption></figure>
-    <figure class="dm"><div class="dm__img"><div class="ph ph--b" role="img" aria-label="Ilustrasi pojok baca"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div><figcaption>Pojok baca</figcaption></figure>
-    <figure class="dm"><div class="dm__img"><div class="ph ph--c" role="img" aria-label="Ilustrasi ruang mengaji"><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div><figcaption>Ruang mengaji</figcaption></figure>
+    <figure class="dm"><div class="dm__img"><div class="ph ph--e" role="img" aria-label="Ilustrasi kelas" data-foto="fasilitas.0"><svg aria-hidden="true"><use href="#sc-school"/></svg></div></div><figcaption>Kelas nyaman</figcaption></figure>
+    <figure class="dm"><div class="dm__img"><div class="ph ph--b" role="img" aria-label="Ilustrasi pojok baca" data-foto="fasilitas.1"><svg aria-hidden="true"><use href="#sc-book"/></svg></div></div><figcaption>Pojok baca</figcaption></figure>
+    <figure class="dm"><div class="dm__img"><div class="ph ph--c" role="img" aria-label="Ilustrasi ruang mengaji" data-foto="fasilitas.2"><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div><figcaption>Ruang mengaji</figcaption></figure>
     <aside class="pray">
       <div class="pray__top"><h3>Jadwal Salat</h3><span data-pray-date data-cfg="kota">Jakarta</span></div>
       <p class="pray__next">Menuju <b data-next-name>…</b><br><span data-next-in></span></p>
@@ -218,7 +227,7 @@
 </section>
 
 <section class="cta" id="daftar">
-  <div class="cta__bg"><div class="ph ph--d" role="img" aria-label=""><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div>
+  <div class="cta__bg"><div class="ph ph--d" role="img" aria-label="" data-foto="cta"><svg aria-hidden="true"><use href="#sc-lamp"/></svg></div></div>
   <div class="cta__card">
     <svg class="cta__fl" aria-hidden="true"><use href="#flower"/></svg>
     <p class="cta__ar" lang="ar" dir="rtl">جَزَاكُمُ اللَّهُ خَيْرًا</p>
@@ -235,7 +244,7 @@
 
 <footer class="foot">
   <div class="foot__brand">
-    <div class="flogo"><svg><use href="#flower"/></svg><span data-cfg="nama">Yayasan Cahaya Ilmu</span></div>
+    <div class="flogo"><svg data-logo><use href="#flower"/></svg><span data-cfg="nama">Yayasan Cahaya Ilmu</span></div>
     <p data-cfg="alamat">Jl. Contoh Raya No. 1, Kota Contoh, Indonesia 00000</p>
   </div>
   <div class="foot__links">
